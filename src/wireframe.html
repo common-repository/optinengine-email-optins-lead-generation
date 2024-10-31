@@ -1,0 +1,72 @@
+<html>
+      <head>
+        <script src="<?php echo plugins_url('dist/client/app.js?v=#VERSION_NUMBER#', __FILE__) ?>"></script>
+        <style type="text/css">
+          body {
+            background-color: #eee;
+            margin: 0px;
+          }
+          header,
+          footer,
+          .template-body {
+            max-width: 1024px;
+            width: 90%;
+            margin: 0 auto;
+          }
+
+          header,
+          footer {
+            padding: 30px 0;
+          }
+
+          header,
+          footer,
+          .template-body td {
+            background-color: #ccc;
+          }
+
+          .template-body td {
+            height: 100%;
+          }
+
+          .template-body table {
+            width: 100%;
+            height: 100%;
+          }
+
+          header,
+          .template-body {
+            margin-bottom: 10px;
+          }
+
+          .sidebar {
+            width: 200px;
+            border-left: 10px solid #eee;
+          }
+
+          .template-body {
+            height: 1024px;
+          }
+
+        </style>
+      </head>
+      <body>
+
+        <header>
+        </header>
+
+        <div class="template-body">
+          <table>
+            <tr>
+              <td></td>
+              <td class="sidebar"></td>
+            </tr>
+          </table>
+        </div>
+
+        <footer>
+        </footer>
+
+        <?php $this->bar_script() ?>
+      </body>
+      </html>

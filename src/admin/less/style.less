@@ -1,0 +1,239 @@
+.mce-floatpanel,
+.media-modal,
+.mce-inline-toolbar-grp {
+  z-index: 200001 !important;
+}
+
+.mce-tinymce {
+  border: 1px solid #e3e3e4 !important;
+  border-radius: 3px;
+}
+
+.mce-inline-toolbar-grp {
+  position: fixed !important;
+}
+
+.flexstyles {
+  @width-lg: 1200px;
+  @width-md: 992px;
+  @width-sm: 768px;
+  @width-xs: 499px;
+  @border-color: #f3f3f3;
+  @text-color: #333;
+  @accent: #5fbeaa;
+  @bg-color: #343434;
+  font-family: 'Open Sans', sans-serif;
+  color: @text-color;
+  .header {
+    margin: 20px 0px;
+    span {
+      display: inline-block;
+      font-size: 150%;
+      font-weight: bold;
+    }
+    .btn {
+      float: right;
+    }
+  }
+  .editor {
+    background-color: #ccc;
+    @options-lg: 330px;
+    @border-width: 5px;
+    @controls-height: 45px;
+    @section-width: 115px;
+    
+    .controls {
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      background-color: @bg-color;
+      height: @controls-height - 1px;
+      border-bottom: 1px solid #444;
+      div {
+        float: right;
+      }
+    }
+    .sections {
+      background-color: @bg-color;
+      position: fixed;
+      bottom: 0px;
+      top: @controls-height;
+      width: @section-width;
+      overflow-y: auto;
+      text-align: center;
+      >div {
+        >div {
+          max-width: 80px;
+          margin: 0 auto;
+          padding: 12px 0px;
+          i {
+            font-size: 22px;
+          }
+        }      
+        width: 100%;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid #3a3a3a;
+        &.active,
+        &:hover {
+          background-color: #5fbeaa;
+          border-bottom: 1px solid #5fbeaa;
+        }
+      }
+    }
+    .options {
+      background-color: #f4f4f5;
+      position: fixed;
+      left: @section-width;
+      width: @options-lg - @border-width;
+      bottom: 0px;
+      top: @controls-height;
+      border-right: @border-width solid @border-color;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      .image-preview {
+        text-align: center;
+        img {
+          max-width: 70%;
+          border: 1px solid #eee;
+        }
+      }
+      .form-group {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+      }
+      .sp-replacer {
+        padding: 0px;
+        border: 1px solid #e3e3e4;
+      }
+      .sp-preview {
+        width: 100%;
+        height: 30px;
+        border: 0px;
+      }
+      .sp-dd {
+        display: none !important;
+        line-height: 27px;
+        float: right;
+        padding-right: 8px;
+        color: #666;
+      }
+      input[type=text],
+      textarea,
+      select {
+        &.form-control {
+          border: 1px solid #e3e3e4;
+        }
+        &.form-control:focus {
+          border-color: #ddd;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+      .form-group {
+        label {
+          font-size: 90%;
+        }
+        a {
+          font-size: 12px;
+          margin-top: 4px;
+          color: @accent;
+          cursor: pointer;
+          i {
+            display: inline-block;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .mce-btn {
+        button {
+          padding: 3px;
+        }
+      }
+    }
+    .preview {
+      position: fixed;
+      left: @options-lg + @section-width;
+      right: 0px;
+      bottom: 0px;
+      top: @controls-height;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .image-picker,
+  .optin-picker {
+    max-height: 400px;
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #eee;
+    >div {
+      &:hover {
+        background-color: #eee;
+      }
+      &.selected {
+        background-color: #5fbeaa;
+      }
+
+      cursor: pointer;
+      display: inline-block;
+      max-width: 25%;
+      width: 25%;
+      text-align: center;
+    }
+    img {
+      max-width: 148px;
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+
+  .optin-picker {
+    border: 0px;
+    .title {
+      font-weight: 600;
+      margin-top: 15px;
+      font-size: 110%;
+    }
+    img {
+      margin: 0 10px;
+      padding: 0 10px;
+      margin-top: 10px;
+      border: 1px solid #eee;
+    }
+  }
+
+  .shortcode {
+    max-height: 100px;
+    height: 100px;
+    border: 1px solid #eee;
+    pre {
+      margin: 10px;
+    }
+  }
+
+  .affiliate-setup {
+    width: 300px;
+    border-left: 2px solid #eee;
+    background-color: #fafafb;
+    vertical-align: top;
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 10pt;
+    }
+  }
+
+  @import "helpers";
+  @import "forms";
+  @import "templates";
+}

@@ -1,0 +1,35 @@
+.reset-styles {
+  all: unset;
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+.optinengine-optin {
+  .reset-styles();
+  * {
+    .reset-styles();
+  }
+  div {
+    display: block;
+  }
+  @import "shared";
+  @import "sizes";
+  &.flex-bar {
+    @import "bar";
+  }
+  &.flex-slider {
+    @import "slider";
+  }
+  &.flex-modal {
+    @import "modal";
+  }
+  &.flex-embedded {
+    @import "embedded";
+  }
+}

@@ -1,0 +1,131 @@
+.template-picker {
+  background-color: #fff;
+  @border-width: 2px;
+  @controls-height: 43px;
+  @header-height: 50px;
+  
+  .controls {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+    height: @controls-height;
+    border-top: @border-width solid @border-color;
+    z-index: 1;
+  }
+  .title {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: @header-height;
+    border-bottom: @border-width solid @border-color;
+    background-color: #343434;
+    h1 {
+      font-size: 150%;
+      padding: 16px 10px;
+      color: white;
+    }
+  }
+  .tags {
+    div {
+      display: inline-block;
+      cursor: pointer;
+      background-color: #112233;
+      opacity: 0.5;
+      color: #fff;
+      padding: 6px 13px;
+      border-radius: 2px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 120%;
+      transition: 0.5s;
+      &.active,
+      &:hover {
+        opacity: 1;
+        background-color: @green;
+      }
+    }
+  }
+  .templates {
+    position: fixed; 
+    left: 0px;
+    width: 100%;
+    bottom: @controls-height + @border-width;
+    top: @header-height + @border-width;
+    background-color: #f4f4f5;
+    overflow-y: scroll;
+
+    .none-found {
+      padding: 20px;
+      font-size: 110%;
+      font-weight: 600;
+    }
+
+    .template-preview {
+      display: inline-block;
+      width: 25%;
+      position: relative;
+      vertical-align: middle;
+
+      @media only screen and (max-width: @width-lg) {
+        width: 33%;
+      }
+      @media only screen and (max-width: @width-sm) {
+        width: 50%;
+      }
+      @media only screen and (max-width: @width-xs) {
+        width: 100%;
+      }
+
+      >div {
+        margin: 10px 15px;
+        position: relative;      
+        .info {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(44, 45, 54, 1);
+          transition: 0.5s;
+          padding: 20px;
+          border-radius: 2px;
+          .name {
+            font-size: 130%;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+          }
+          .description {
+            color: white;
+            font-size: 110%;
+            margin-bottom: 10px;
+          }
+          .buttons {
+            .btn {
+              display: block;
+              cursor: pointer;
+              margin-bottom: 10px;
+              padding: 10px 10px;
+              font-size: 130%;
+              opacity: 0.9;
+              transition: 0.5s;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        &:hover {
+          .info { opacity: 1; }
+        }
+        img { 
+          width: 100%; 
+          // border: 1px solid #eee;
+        }
+      }
+    }
+  }
+}

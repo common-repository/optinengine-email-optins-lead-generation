@@ -1,0 +1,150 @@
+.form-group {
+  >* {
+    display: block;
+  }
+  h3 {
+    margin: 0px;
+    margin-bottom: 5px;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  a {
+    display: inline-block;
+  }
+}
+
+input[type=text],
+textarea,
+select {
+  &.form-control {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 3px 8px;
+    font-size: 12px !important;
+    line-height: 1.42857143;
+    color: #111;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-shadow: none;
+  }
+  &.form-control:focus {
+    border-color: #ddd;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+textarea.form-control {
+  height: 80px;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+  opacity: 0.5;
+  font-size: 100%;
+}
+
+.form-group {
+  margin-bottom: 7px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.form-section {
+  font-weight: 600;
+  padding: 16px 20px;
+  border-radius: 0px;
+  font-size: 15px;
+  cursor: pointer;
+  i {
+    width: 25px;
+  }
+
+  /*
+  // grey scheme
+  background-color: #e8e8e8;
+  color: #444;
+  border-bottom: 1px solid #e0e0e0;
+  border-left: 2px solid @green;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }*/
+
+  // blue scheme
+  color: white;
+  background-color: #112233;
+  transition: 0.5s;
+  &:hover {
+    background-color: #0F1F2E;
+  }
+}
+
+.form-section-container {
+  &:last-child {
+    border-bottom: 0;
+  }
+  hr {
+    margin: 10px 0px;
+    margin-top: 20px;
+    border-color: #e1e1e1;
+    border-width: 1px;
+    border-top: 0px;
+  }
+}
+
+.flex-switch {
+  div {
+    display: inline-block;
+  }
+  .switcher {
+    margin-right: 5px;
+    div {
+      border: 1px solid @border-color;
+      background-color: #ccc;
+      width: 35px;
+      border-radius: 0px 3px 3px 0px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: bold;
+      color: #888;
+      text-transform: uppercase;
+      padding: 4px 5px;
+     
+      &:first-child {
+        border-right: 0px;
+        border-radius: 3px 0px 0px 3px;
+      }
+
+      &.checked {
+        background-color: @green;
+        color: white;
+        cursor: default;
+      }
+    }
+  }
+  .label {}
+}
+
+ul.bullets {
+  list-style-type: circle;
+  margin-left: 20px;
+}
